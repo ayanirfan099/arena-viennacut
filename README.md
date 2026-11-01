@@ -1,6 +1,8 @@
-# VIENNA CUTS — Premium Barber Studio
+# Vienna Cuts — Next.js and SQLite prototype
 
 A bilingual (German / English) fictional barber-studio demonstration, built at the repository root with Next.js App Router, React, TypeScript, Tailwind CSS v4, SQLite (`node:sqlite`) and Zod. It is a product prototype, not an operating business. Names, imagery, sample records, hours, testimonials and service catalogue are illustrative. No real address, phone number, customer review, email/SMS delivery, payment integration, or connected AI assistant is represented.
+
+[![CI](https://github.com/ayanirfan099/arena-viennacut/actions/workflows/ci.yml/badge.svg)](https://github.com/ayanirfan099/arena-viennacut/actions/workflows/ci.yml)
 
 ## Requirements and setup
 
