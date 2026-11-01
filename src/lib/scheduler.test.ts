@@ -1,6 +1,7 @@
-import { describe, it, expect } from "vitest";
+import { afterEach, describe, it, expect, vi } from "vitest";
 import { hasOverlap, localToUtc, getSlots } from "./scheduler";
 describe("booking interval rules", () => {
+  afterEach(() => vi.useRealTimers());
   it("uses half-open interval overlap semantics", () => {
     expect(hasOverlap("10:00", "11:00", "11:00", "12:00")).toBe(false);
     expect(hasOverlap("10:30", "11:30", "11:00", "12:00")).toBe(true);
@@ -19,6 +20,9 @@ describe("booking interval rules", () => {
     );
   });
   it("respects weekly opening days and duration-aware Saturday closing", () => {
+    // Keep this opening-hours fixture ahead of the clock, even after October 2026.
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-10-30T06:00:00Z"));
     expect(getSlots("2026-11-01", "classic", "otto")).toEqual([]);
     expect(getSlots("2026-11-02", "classic", "otto")).toEqual([]);
     const saturday = getSlots("2026-10-31", "grooming", "otto").map(
