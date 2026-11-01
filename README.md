@@ -1,4 +1,4 @@
-# Vienna Cuts — Next.js and SQLite prototype
+# Vienna Cuts — SQLite Booking Prototype
 
 A bilingual (German / English) fictional barber-studio demonstration, built at the repository root with Next.js App Router, React, TypeScript, Tailwind CSS v4, SQLite (`node:sqlite`) and Zod. It is a product prototype, not an operating business. Names, imagery, sample records, hours, testimonials and service catalogue are illustrative. No real address, phone number, customer review, email/SMS delivery, payment integration, or connected AI assistant is represented.
 
